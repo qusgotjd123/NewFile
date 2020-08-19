@@ -1,0 +1,11 @@
+git clone site
+
+ll
+
+python createsource.py
+
+cat str
+
+오라클 java se 8u261
+
+jdk c java dk

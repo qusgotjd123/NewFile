@@ -1,0 +1,78 @@
+1. 파이썬 문자열 자료형
+문자열 - (string) ""로 둘려싸여있는 "123""a" 이런걸 문자열이라고 한다.
+               """ 따옴표를 연속으로 사용하며 더 깔끔하다
+ 문자열 연산하기
+문자열 더해서 연결하기 - (concatenation) head = "a" tall = "b" head + tail ="ab" 배출
+문자열 곱하기 a = "python"  a * 2 "pythonpython"
+문자열 길이구하기(len) a = "Life is too short" len(a)  17 0~16 까지 17개가 배출
+문자열 인덱싱 a = "Life is too short, You need Python" a[3] e 배출
+                  a[-0] L 배출 0으로 생각 a[-2]o 뒤에서 두번째꺼 배출
+문자열 슬라이싱 a = "Life is too short, You need Python"
+	         b = a[0] + a[1] + a[2] + a[3]  b = 'Life' 배출
+		a[0:4] 'Life' a[0:3] 'Lif' 배출 이처럼 문자열 끝번호는 걸러냄
+		시작이 0일필욘 없다. a[19:0] 'You need Python' 
+		a[:] 전체 문자열 배출  a[19:-7] 'You need' -7은포함시키지 않음
+문자열 슬라이싱 나누기 a = "20010331Rainy" date = a[:8] weather = a[8:] 
+			date '20010331' weather 'Rainy'
+문자열 포매팅(%) "I eat %d apples." % 3  'I eat 3 apples.'       %d 숫자(정수)
+	      "I eat %s apples." % "five" 'I eat five apples.' %s 문자열
+	       number = 3  "I eat %d apples." % number 'I eat 3 apples.' 이처럼 변수대입 가능
+format 함수 사용한 포매팅 "I eat {0} apples".format(3) 'I eat 3 apples' 
+f문자열 포맷팅d = {'name':'홍길동', 'age':30}  f'나의 이름은 {d["name"]}입니다. 나이는 {d["age"]}입니다.'
+		'나의 이름은 홍길동입니다. 나이는 30입니다.'
+문자 개수 세기(count) a = "hobby" a.count('b') 2 문자열중 b의 개수를 반환
+위치 알려주기 (find) a = "Python is the best choice" a.find('b') 14  a.find('k') -1 
+		b는 위치가 있지만, k는 없으므로 -1
+위치 알려주기2(index) a = "Life is too short" a.index('t') 8 a.index('k') 오류발생
+		t는 위치반환 하지만 k는 없으므로 오류발생
+문자열 삽입(join) ",".join('abcd') 'a,b,c,d' 이처럼 문자 사이사이에 , 삽입
+양쪽 공백 지우기(strip) a = " hi " a.strip() 'hi' 이처럼 양쪽 공백 제거
+문자열 나누기(split) a = "Life is too short" a.split() ['Life', 'is', 'too', 'short']
+		 b = "a:b:c:d" b.split(':') ['a', 'b', 'c', 'd'] 이처럼 특정값이 있으면 그걸기준으로 함
+
+tuple, 컴마 꼭 str
+
+2. 파이썬 리스트 자료형
+리스트는 [ ]로 감싸고 , 로 구분해준다. e = [1, 2, ['Life', 'is']] 리스트안에 어떠한 자료형도 포함가능
+리스트의 인덱싱 a = [1, 2, 3] a[0] 1 출력 a[0] + a[2] 4 출력 a[-1] 3 출력
+		a[-1] ['a', 'b', 'c'] 출력 a[3] ['a', 'b', 'c'] 출력 
+		a[-1][0] 'a' 출력 a[-1][1] 'b' 출력 a[-1][2] 'c' 출력
+리스트의 슬라이싱 a = [1, 2, 3, 4, 5] a[0:2] [1, 2] 배출 이처럼 맨마지막 제외한 것만 배출
+	a = [1, 2, 3, 4, 5] , b = a[:2] , c = a[2:] ,b [1, 2] ,c [3, 4, 5] [2:0] 2부터시작이므로 값배출
+리스트 더하기 a = [1, 2, 3], b = [4, 5, 6] , a + b [1, 2, 3, 4, 5, 6] 
+리스트 반복하기 a = [1, 2, 3] a * 3 [1, 2, 3, 1, 2, 3, 1, 2, 3] 이처럼 반복이된다
+리스트 길이 구하기 a = [1,2,3] len(a) 3배출 
+리스트값 수정 a = [1, 2, 3] , a[2] = 4, a [1, 2, 4] 이처럼 3이 4로 변형
+(del) 함수 사용해 리스트제거 a = [1,2,3] , del a[1], a[1,3]
+리스트 요소추가(append) a = [1, 2, 3], a.append(4), a [1, 2, 3, 4] 맨마지막에 추가하는함수
+리스트 정렬(sort) a = [1, 4, 3, 2], a.sort() , a[1, 2, 3, 4] 이처럼 값을 정렬한다 알파벳 가능
+리스트 뒤집기(reverse) a = ['a', 'c', 'b'] , a.reverse(), a ['b', 'c', 'a'] 말그대로 거꾸로 뒤집는다.
+위치 반환(index) a = [1,2,3] , a.index(3) 2 ,a.index(1) 0 이처럼 위치 반환
+리스트 요소 삽입(insert) a = [1,2,3] , a.insert(0,4), a[4,1,2,3] 1번재는 놓을위치 2번재는 숫자삽입
+리스트 개수 세기(count) a = [1,2,3,1] , a.count(1) 2  1이라는 값이 리스트에 2개 있으므로 2반환
+리스트 확장(extend) a = [1,2,3], a.extend([4,5]) ,a[1, 2, 3, 4, 5], b = [6, 7], a.extend(b), a[1, 2, 3, 4, 5, 6, 7]
+3. 튜플 자료형
+튜플 리스트랑 거이 비슷하지만 ()로 둘러싸여있고 튜플은 생성,삭제,수정이 불가능 t5 = ('a', 'b', ('ab', 'cd'))
+4. 딕셔너리
+{Key1:Value1, Key2:Value2, Key3:Value3, ...} Key : Value 이런형태로 이루어져 있다.
+a = {1: 'hi'} Key로 정수 1 Value로 문자열 'hi'를 사용한 예이다.
+딕셔너리 쌍 추가 a = {1: 'a'} ,a[2] = 'b', a {1: 'a', 2: 'b'} 이처럼 a[2] = 'b'를 입력하면 2:b 라는 딕셔너리쌍이 추가
+		 a[3] = [1,2,3] , a  {1: 'a', 2: 'b', 'name': 'pey', 3: [1, 2, 3]} 이처럼 한쌍이 추가된다
+딕셔너리 요소삭제 del a [1] , a {2: 'b', 'name': 'pey', 3: [1, 2, 3]} del 함수를 사용해서 지정한 쌍을 삭제
+딕셔너리 Key사용해서 Value 얻기 grade = {'pey': 10, 'julliet': 99} , grade['pey'] 10 , grade['julliet'] 99
+		이처럼 key 를 입력하면 Value를 출력한다.
+딕셔너리 주의사항 a = {1:'a', 1:'b'} ,a {1: 'b'} 이처럼 Key 가 2개일경우 쌍이 무시된다
+		a = {[1,2] : 'hi'} 이거 안된다 key에 리스트 사용 불가 !!!!!
+딕셔너리 Key 리스트(keys) a = {'name': 'pey', 'phone': '0119993323', 'birth': '1118'}  
+		a.keys() ,dict_keys(['name', 'phone', 'birth']) dict_keys 객채로 돌려준다
+		list(a.keys()) ['name' , 'phone' , 'birth'] 이처럼 사용가능
+딕셔너리 Value 리스트(values) a.values() dict_values(['pey', '0119993323', '1118']) 이처럼 dict_values객체로 돌려준다
+딕셔너리 key,value쌍 얻기(items) a.items() dict_items([('name', 'pey'), ('phone', '0119993323'), ('birth', '1118')])
+			이처럼 쌍으로 묶어서 dict_items 객체로 돌려준다.
+딕셔너리 key:value쌍 모두지움(clear) a.clear()  a {} 딕셔너리 안 모든요소 삭제
+딕셔너리 key로 Value얻기(get) a = {'name':'pey'} a.get('name') ,'pey' 만약 없는값 입력시 None = 거짓 이라는 거다
+해당 key가 딕셔너리에 있는지 조사(in) a = {'name':'pey', 'phone':'0119993323', 'birth': '1118'}
+			'name' in a ,True    'email' in a ,False 배출
+5. 집합 자료형
+집합(set) 집합에 관련된것을 쉽게 처리하기 위해 만들어진 자료형 s = set() 만들수있음
+s1 = set([1,2,3])  s1 {1, 2, 3}  s2 = set("Hello") ,  s2 {'e', 'H', 'l', 'o'} 이처럼 중복은 허용하지않음 순서가 없다.

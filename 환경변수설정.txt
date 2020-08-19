@@ -1,0 +1,49 @@
+환경변수 설정
+python 똑같은 버전끼리 사용 가능
+기능 >> 구현방법(파이썬 버전 많음)
+32bit 3.5py
+cmd 에서 python 바꿀수 있음.
+
+윈도우 10 path
+
+xyzgui/myvenv
+py35 + pyqt4 설치
+ 설치할려면 pip install
+
+mkdir xyzgui   폴도 만들기
+python --version 파이썬 버전 확인
+
+site:python.org venv 검색 이런식으로 
+
+환경변수 만들기
+
+c:\Python\Python35-32\python.exe --version
+
+c:\Python\Python35-32\python.exe -m venv myvenv
+
+가상환경 활성
+myvenv\Scripts\activate.bat
+
+pip list
+
+python -m pip install --upgrade pip
+
+pip list
+
+파이썬 버전 확인
+python --version
+
+c:\Python\Python35-32\python.exe -m venv myvenv
+
+pip install PyQt4-4.11.4-cp35-cp35m-win32.whl 
+선생님이 깔아주신 파일 설치 pycharmProjects에 설치
+
+.. 한칸 뒤로
+/ 초기화
+
+import sys
+from PyQt5.QtWidgets import QApplication, QWidget
+
+필요한 모듈들을 불러옵니다. 기본적인 UI 구성요소를 제공하는 
+위젯 (클래스)들은 PyQt5.QtWidgets 모듈에 포함되어 있습니다.
+
